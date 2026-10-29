@@ -1,0 +1,12 @@
+{
+  "name": "chessbloom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beginner-friendly chess learning app with a Gemma-powered Bloom Coach.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
