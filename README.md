@@ -10,7 +10,7 @@ For the demo-only static version, open `index.html` in a browser. For live AI an
 npm start
 ```
 
-Then visit `http://localhost:3000`.
+Then visit `http://localhost:3001` with the current `.env` configuration. If you change `PORT`, use that port in the browser.
 
 ## Connect Google AI Studio
 
@@ -41,4 +41,4 @@ Do not deploy with `python -m http.server` if you want live Gemma responses; tha
 - Bloom Coach mentor with beginner explanations, quick questions, and free-form prompts
 - Responsive layout for desktop and mobile
 
-The current coach runs in demo mode so the app works immediately. To connect Google AI Studio/Gemma, keep the API key on a server and replace the `coach()` demo messages with a backend request that sends the board FEN, moves, and engine evaluation to your selected model. Stockfish should remain the source of truth for chess calculations; Gemma should explain those results.
+If `GOOGLE_AI_API_KEY` is absent, the coach intentionally uses a local demo response and the API returns a clear 503 instead of exposing or guessing a key. Once the key and exact model ID are added to `.env`, the existing frontend request uses the live backend proxy automatically. Stockfish should remain the source of truth for chess calculations; Gemma should explain those results.
